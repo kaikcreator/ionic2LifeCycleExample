@@ -13,8 +13,8 @@ export class HomePage {
 
   }
 
-  goToMusicPage(){
-    this.navCtrl.push(MusicPage);
+  goToMusicPage(audio){
+    this.navCtrl.push(MusicPage, {audio});
   }
 
 }

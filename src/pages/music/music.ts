@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import * as howler from 'howler';
 
 /*
@@ -15,11 +15,14 @@ import * as howler from 'howler';
 export class MusicPage {
 
   music:any;
+  image:string;
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public params: NavParams) {}
 
   ionViewDidLoad() {
-    this.music = new howler.Howl({ src: ['assets/music/oceanWaves.wav']});
+    let audioFile = this.params.get('audio');
+    this.music = new howler.Howl({ src: [`assets/music/${audioFile}.mp3`]});
+    this.image = `assets/img/${audioFile}.jpg`;
   }
 
   ionViewDidEnter(){

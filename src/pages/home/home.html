@@ -1,10 +1,14 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Relax yourself v0.1</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Life Cycle Events Example</h2>
-  <button ion-button round (click)="goToMusicPage()">Start</button>
+  <h2>Select a relaxing environment</h2>
+  <button ion-button round full (click)="goToMusicPage('ocean-waves')">Ocean Waves</button>
+  <button ion-button round full (click)="goToMusicPage('forest')">Forest</button>
+  <button ion-button round full (click)="goToMusicPage('night-Wildlife')">Night Wildlife</button>
+  <button ion-button round full (click)="goToMusicPage('rain-storm')">Rain Storm</button>
+  <button ion-button round full (click)="goToMusicPage('water-flowing')">Water Flowing</button>
 </ion-content>
