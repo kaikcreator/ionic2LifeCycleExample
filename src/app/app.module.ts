@@ -3,13 +3,15 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { MusicPage } from '../pages/music/music';
+import { CreditsPage } from '../pages/credits/credits';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    MusicPage
+    MusicPage,
+    CreditsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,7 +20,8 @@ import { MusicPage } from '../pages/music/music';
   entryComponents: [
     MyApp,
     HomePage,
-    MusicPage
+    MusicPage,
+    CreditsPage
   ],
   providers: []
 })

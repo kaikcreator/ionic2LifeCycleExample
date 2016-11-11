@@ -9,9 +9,7 @@ import { MusicPage } from '../music/music';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController) {}
 
   goToMusicPage(audio){
     this.navCtrl.push(MusicPage, {audio});

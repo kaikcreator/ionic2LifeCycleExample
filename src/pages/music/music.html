@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Music</ion-title>
+    <ion-title>Playing...</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only [navPush]="creditsPage">
+        <ion-icon name="information-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <img [src]="image">
+<ion-content>
+  <div [style.backgroundImage]="'url(' + image +')'"></div>
 </ion-content>
