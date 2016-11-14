@@ -31,13 +31,13 @@ export class MusicPage {
     this.image = `assets/img/${audioFile}.jpg`;
   }
 
-  ionViewDidEnter(){
+  ionViewWillEnter(){
     console.log("playing audio");
     this.music.play();
     this.music.loop(true);
   }
 
-  ionViewWillLeave(){
+  ionViewDidLeave(){
     console.log("pausing audio");
     this.music.pause();
   }
